@@ -4,13 +4,13 @@ public class koneksi {
     private Connection koneksi;
     public Connection connect(){
         try{
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("Berhasil Konek");
         }
         catch(ClassNotFoundException ex) {
             System.out.println("Gagal Koneksi" +ex);
         }
-        String url = "jdbc:mysql://localhost/nw_aestetic";
+        String url = "jdbc:mysql://localhost/nw_aesthetic";
         try{
             koneksi=DriverManager.getConnection(url,"root","");
             System.out.println("Berhasil Koneksi database");
