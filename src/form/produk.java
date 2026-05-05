@@ -1,12 +1,10 @@
 
 package form;
-import java.awt.event.KeyEvent;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import javax.swing.JFrame;
+import java.sql.*;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import java.awt.event.KeyEvent;
+import koneksi.koneksi;
 import koneksi.koneksi;
 public class produk extends javax.swing.JPanel {
 
