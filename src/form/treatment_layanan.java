@@ -73,16 +73,14 @@ public class treatment_layanan extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtId = new javax.swing.JTextField();
+        txtid = new javax.swing.JTextField();
         txtNama = new javax.swing.JTextField();
         txtHarga = new javax.swing.JTextField();
         txtDurasi = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        btnUbah = new javax.swing.JButton();
         btnHapus = new javax.swing.JButton();
+        btnBatal = new javax.swing.JButton();
         btnSimpan = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tbllayanan = new javax.swing.JTable();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(702, 643));
@@ -108,19 +106,9 @@ public class treatment_layanan extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jLabel5.setText("Treatment / Layanan");
 
-        btnUbah.setText("Ubah");
-        btnUbah.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUbahActionPerformed(evt);
-            }
-        });
-
         btnHapus.setText("Hapus");
-        btnHapus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHapusActionPerformed(evt);
-            }
-        });
+
+        btnBatal.setText("Batal");
 
         btnSimpan.setText("Simpan");
         btnSimpan.addActionListener(new java.awt.event.ActionListener() {
@@ -129,60 +117,36 @@ public class treatment_layanan extends javax.swing.JPanel {
             }
         });
 
-        tbllayanan.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "ID_Treatment", "Nama_Treatment", "Harga", "Durasi"
-            }
-        ));
-        tbllayanan.setShowGrid(true);
-        tbllayanan.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tbllayananMouseClicked(evt);
-            }
-        });
-        jScrollPane1.setViewportView(tbllayanan);
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtId)
-                    .addComponent(txtNama)
-                    .addComponent(txtHarga)
-                    .addComponent(txtDurasi))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4))
+                        .addGap(24, 24, 24)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtid)
+                            .addComponent(txtNama)
+                            .addComponent(txtHarga)
+                            .addComponent(txtDurasi)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(129, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(btnSimpan)
+                                .addGap(49, 49, 49)
+                                .addComponent(btnBatal)
+                                .addGap(45, 45, 45)
+                                .addComponent(btnHapus)))))
                 .addGap(172, 172, 172))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(242, 242, 242)
-                        .addComponent(jLabel5))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(203, 203, 203)
-                        .addComponent(btnSimpan)
-                        .addGap(36, 36, 36)
-                        .addComponent(btnHapus)
-                        .addGap(38, 38, 38)
-                        .addComponent(btnUbah))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 649, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,7 +156,7 @@ public class treatment_layanan extends javax.swing.JPanel {
                 .addGap(46, 46, 46)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -205,143 +169,60 @@ public class treatment_layanan extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtDurasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSimpan)
-                    .addComponent(btnHapus)
-                    .addComponent(btnUbah))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(178, Short.MAX_VALUE))
+                    .addComponent(btnBatal)
+                    .addComponent(btnHapus))
+                .addContainerGap(232, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIdActionPerformed
-
     private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed
-                                              
-        if (txtId.getText().isEmpty() || txtNama.getText().isEmpty() || txtHarga.getText().isEmpty() || txtDurasi.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Semua data harus diisi!");
-            return;
-        }
-        try {
-            String sql = "INSERT INTO treatment_layanan VALUES (?, ?, ?, ?)";
-            PreparedStatement pst = conn.prepareStatement(sql);
-            
-            pst.setString(1, txtId.getText());
-            pst.setString(2, txtNama.getText());
-            pst.setInt(3, Integer.parseInt(txtHarga.getText()));
-            pst.setString(4, txtDurasi.getText());
-            
-            pst.execute();
-            JOptionPane.showMessageDialog(null, "Data berhasil disimpan");
-            kosong();     
-            datatable();  
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Gagal simpan: " + e.getMessage());
-        }
+   private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    // Ambil data dari form
+    String id = txtid.getText();
+    String nama = txtNama.getText();
+    String harga = txtHarga.getText();
+    String durasi = txtDurasi.getText();
+
+    // Contoh validasi sederhana
+    if(id.isEmpty() || nama.isEmpty()) {
+        javax.swing.JOptionPane.showMessageDialog(this, "ID dan Nama harus diisi!");
+    } else {
+        // Proses simpan (misal tampilkan pesan dulu)
+        System.out.println("Data Tersimpan: " + nama + " (" + id + ")");
+        javax.swing.JOptionPane.showMessageDialog(this, "Data Berhasil Disimpan!");
+    }
+}
+
     }//GEN-LAST:event_btnSimpanActionPerformed
 
-    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
-        if (txtId.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Pilih data yang mau dihapus dulu!");
-            return;
-        }
-        int pesan = JOptionPane.showConfirmDialog(null, "Yakin mau hapus data ini?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
-        if (pesan == JOptionPane.YES_OPTION) {
-            try {
-                String sql = "DELETE FROM treatment_layanan WHERE id_treatment=?";
-                PreparedStatement pst = conn.prepareStatement(sql);
-                
-                pst.setString(1, txtId.getText());
-                
-                pst.execute();
-                JOptionPane.showMessageDialog(null, "Data berhasil dihapus");
-                kosong();
-                datatable();
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(this, "Gagal hapus: " + e.getMessage());
-            }
-        }
-    }//GEN-LAST:event_btnHapusActionPerformed
-
-    private void btnUbahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUbahActionPerformed
-        if (txtId.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Pilih data yang mau diubah dulu!");
-            return;
-        }
-        try {
-            String sql = "UPDATE treatment_layanan SET nama_treatment=?, harga=?, durasi=? WHERE id_treatment=?";
-            PreparedStatement pst = conn.prepareStatement(sql);
-            
-            pst.setString(1, txtNama.getText());
-            pst.setInt(2, Integer.parseInt(txtHarga.getText()));
-            pst.setString(3, txtDurasi.getText());
-            pst.setString(4, txtId.getText());
-            
-            pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Data berhasil diubah");
-            kosong();
-            datatable();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Gagal ubah: " + e.getMessage());
-        }
-    }//GEN-LAST:event_btnUbahActionPerformed
-
-    private void tbllayananMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbllayananMouseClicked
-        int bar = tbllayanan.getSelectedRow();
-        String a = tabmode.getValueAt(bar, 0).toString();
-        String b = tabmode.getValueAt(bar, 1).toString();
-        String c = tabmode.getValueAt(bar, 2).toString();
-        String d = tabmode.getValueAt(bar, 3).toString();
-        String e = tabmode.getValueAt(bar, 4).toString();
-        txtId.setText(a);
-        txtNama.setText(b);
-        txtHarga.setText(d);        
-        txtDurasi.setText(d);        // TODO add your handling code here:
-    }//GEN-LAST:event_tbllayananMouseClicked
-    private void bersihkanForm() {
-        txtId.setText("");
-        txtNama.setText("");
-        txtHarga.setText("");
-        txtDurasi.setText("");
-        txtId.requestFocus();
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBatal;
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnSimpan;
-    private javax.swing.JButton btnUbah;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tbllayanan;
     private javax.swing.JTextField txtDurasi;
     private javax.swing.JTextField txtHarga;
-    private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtNama;
+    private javax.swing.JTextField txtid;
     // End of variables declaration//GEN-END:variables
 }
