@@ -240,6 +240,7 @@ public class laporan_data_pasien extends javax.swing.JFrame {
                 "Kode Bahan", "Nama", "Jenis", "Stock"
             }
         ));
+        jTable1.setShowGrid(true);
         jScrollPane2.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
