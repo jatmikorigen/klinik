@@ -107,12 +107,12 @@
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jSimpan" min="-2" pref="75" max="-2" attributes="0"/>
+                                      <Component id="jSimpan" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jEdit" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jHapus" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                                       <Component id="Jclear" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -244,6 +244,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jSimpan">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/logo/icons8-save-10.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Simpan"/>
               </Properties>
               <Events>
@@ -252,6 +255,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jEdit">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/logo/icons8-change-10.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Edit"/>
               </Properties>
               <Events>
@@ -260,6 +266,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="jHapus">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/logo/icons8-delete-10.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hapus"/>
               </Properties>
               <Events>
@@ -268,6 +277,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="Jclear">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/logo/icons8-clear-symbol-10.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Clear"/>
               </Properties>
               <Events>

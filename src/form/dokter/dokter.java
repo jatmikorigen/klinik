@@ -68,6 +68,7 @@ public class dokter extends javax.swing.JPanel {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pria", "Wanita" }));
 
+        jSimpan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo/icons8-save-10.png"))); // NOI18N
         jSimpan.setText("Simpan");
         jSimpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +76,7 @@ public class dokter extends javax.swing.JPanel {
             }
         });
 
+        jEdit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo/icons8-change-10.png"))); // NOI18N
         jEdit.setText("Edit");
         jEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +84,7 @@ public class dokter extends javax.swing.JPanel {
             }
         });
 
+        jHapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo/icons8-delete-10.png"))); // NOI18N
         jHapus.setText("Hapus");
         jHapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +92,7 @@ public class dokter extends javax.swing.JPanel {
             }
         });
 
+        Jclear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo/icons8-clear-symbol-10.png"))); // NOI18N
         Jclear.setText("Clear");
         Jclear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,12 +172,12 @@ public class dokter extends javax.swing.JPanel {
                                     .addComponent(jnohp)
                                     .addComponent(jkodedokter)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jSimpan, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jSimpan)
                                 .addGap(18, 18, 18)
                                 .addComponent(jEdit)
                                 .addGap(18, 18, 18)
                                 .addComponent(jHapus)
-                                .addGap(18, 18, 18)
+                                .addGap(22, 22, 22)
                                 .addComponent(Jclear)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
